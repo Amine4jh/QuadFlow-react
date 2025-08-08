@@ -1,12 +1,50 @@
-# React + Vite
+# ⏳ QuadFlow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**All-in-One Task Manager** is a productivity-focused web application that combines four essential tools — **To-Do List**, **Notes**, **Pomodoro Timer**, and **Calendar** — into one seamless experience.  
+The goal is to help users stay **organized, focused, and efficient** without juggling between multiple apps.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 Project Overview
+The **4-in-1 Time Management App** is designed to solve a **real-world daily problem**:  
+> Staying organized and maintaining focus without switching between multiple tools.  
 
-## Expanding the ESLint configuration
+With this app, users can:
+- Keep track of tasks
+- Take and store notes
+- Manage focus sessions using the Pomodoro technique
+- Visualize schedules and important dates in a calendar view
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+### ✅ To-Do List
+- Add, and delete tasks
+- Mark tasks as complete
+
+### 📝 Notes
+- Create and save quick notes  
+- Edit and delete notes
+
+### ⏱️ Pomodoro Counter
+- 25-minute focus sessions with 5-minute breaks  
+- Start, pause, and reset buttons  
+- Visual progress indicator
+
+### 📅 Calendar
+- Monthly calendar view  
+- Add events/tasks to specific dates  
+- Integrated holiday/event data from a public API
+
+---
+
+## 🛠 Tech Stack
+- **Frontend:** ReactJS, Tailwind CSS  
+- **Calendar API:** (Still Searching)
+- **Deployment:** Vercel  
+
+---
+
+## 🔌 API Integration
+- **Calendar API**: Used to fetch holiday data or pre-scheduled events.
