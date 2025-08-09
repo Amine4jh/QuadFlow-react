@@ -4,6 +4,7 @@ import Hero from "../components/sections/Hero";
 import Features from "../components/sections/Features";
 import WhyUs from "../components/sections/WhyUs";
 import TryNowBanner from "../components/sections/TryNowBanner";
+import Footer from "../components/layout/Footer";
 
 const LandingPage = () => {
   return (
@@ -13,6 +14,7 @@ const LandingPage = () => {
       <Features />
       <WhyUs />
       <TryNowBanner />
+      <Footer />
     </div>
   );
 };
