@@ -1,4 +1,4 @@
-const FeaturesCard = () => {
+const PomodoroCard = () => {
   return (
     <div>
       <img src="" alt="feature" />
@@ -10,4 +10,4 @@ const FeaturesCard = () => {
   );
 };
 
-export default FeaturesCard;
+export default PomodoroCard;

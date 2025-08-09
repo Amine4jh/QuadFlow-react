@@ -1,4 +1,4 @@
-const FeaturesCard = () => {
+const TodoCard = () => {
   return (
     <div>
       <img src="" alt="feature" />
@@ -11,4 +11,4 @@ const FeaturesCard = () => {
   );
 };
 
-export default FeaturesCard;
+export default TodoCard;
