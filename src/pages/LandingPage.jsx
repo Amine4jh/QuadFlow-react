@@ -3,6 +3,7 @@ import Header from "../components/layout/Header";
 import Hero from "../components/sections/Hero";
 import Features from "../components/sections/Features";
 import WhyUs from "../components/sections/WhyUs";
+import TryNowBanner from "../components/sections/TryNowBanner";
 
 const LandingPage = () => {
   return (
@@ -11,6 +12,7 @@ const LandingPage = () => {
       <Hero />
       <Features />
       <WhyUs />
+      <TryNowBanner />
     </div>
   );
 };
