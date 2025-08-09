@@ -6,8 +6,8 @@ import PomodoroCard from "../featuresCards/PomodoroCard";
 const Features = () => {
   return (
     <section id="features">
-      <h2 id="firstLine">Everything you need to</h2>
-      <h2 id="lastLine">stay productive</h2>
+      <h2 id="firstLine">Everything You Need To</h2>
+      <h2 id="lastLine">Stay Productive</h2>
       <p>
         Four powerful tools designed to work together seamlessly, eliminating
         the need to juggle multiple apps.
