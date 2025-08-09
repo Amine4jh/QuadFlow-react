@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+
+/* Calendar */
+.sx-react-calendar-wrapper {
+  @apply w-[1000px] max-w-[100vw] h-[800px] max-h-[90vh];
+}
