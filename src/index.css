@@ -2,7 +2,7 @@
 
 /* Custom Theme */
 @theme {
-  --font-primary: "";
+  --font-primary: "Arial";
 
   --color-background: #0a0c14;
   --color-background-dark: #111827;
@@ -23,9 +23,15 @@
 
 /* Just For Now */
 body {
-  @apply bg-background;
+  @apply bg-background flex justify-center;
 }
 /* Just For Now */
+* {
+  @apply font-primary;
+}
+#container {
+  @apply px-15 w-[99vw] bg-[url(./assets/images/background.png)] bg-contain bg-no-repeat;
+}
 
 /* Headings */
 
@@ -77,16 +83,73 @@ footer p {
 
 /** Default **/
 button {
-  @apply text-foreground font-bold px-6 py-2 rounded-xl flex items-center;
+  @apply text-foreground font-bold px-6 py-2 rounded-xl flex items-center cursor-pointer border-2 border-transparent transition-all;
 }
 /** Specific **/
 button#primary {
-  @apply bg-primary;
+  @apply bg-primary hover:bg-transparent hover:border-foreground;
 }
 button#secondary {
   @apply bg-background-dark;
 }
 /*==========*/
+
+/* Links */
+
+/** Default **/
+a {
+  @apply text-base text-primary-glow;
+}
+/** Specific **/
+
+/*==========*/
+
+/* Sections */
+section {
+  @apply my-62;
+}
+
+/* Header */
+header {
+  @apply flex items-center justify-between py-2;
+}
+header a {
+  @apply text-foreground font-bold m-6 py-2 border-b border-transparent transition-all hover:text-accent hover:border-accent;
+}
+header button {
+  @apply px-4 py-1 hover:scale-105;
+}
+
+/* Hero Section */
+#hero p {
+  @apply w-md mx-auto my-5;
+}
+#hero button {
+  @apply mx-auto hover:-translate-y-3;
+}
+
+/* Features Section */
+section#features {
+  @apply mt-120;
+}
+#features #subTitle {
+  @apply w-lg mx-auto my-5;
+}
+#ftCardsContainer {
+  @apply mt-25 flex items-start justify-evenly;
+}
+#ftCardsContainer div {
+  @apply p-4 rounded-xl w-75;
+}
+#ftCardsContainer #icon {
+  @apply text-7xl text-primary mx-auto;
+}
+#ftCardsContainer h3 {
+  @apply text-center mt-6 mb-2;
+}
+#ftCardsContainer p {
+  @apply text-center;
+}
 
 /* Calendar */
 .sx-react-calendar-wrapper {
