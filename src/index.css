@@ -199,7 +199,7 @@ footer #icon {
   @apply block my-2 hover:text-primary;
 }
 footer p {
-  @apply p-2 text-base;
+  @apply p-2 text-base text-border;
 }
 /* ==================================================== */
 
