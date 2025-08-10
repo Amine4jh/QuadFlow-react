@@ -1,9 +1,11 @@
-import { IoIosTimer } from "react-icons/io";
+import { SiStagetimer } from "react-icons/si";
 
 const PomodoroCard = () => {
   return (
-    <div>
-      <IoIosTimer id="icon" />
+    <div id="card">
+      <div id="iconContainer">
+        <SiStagetimer id="icon" />
+      </div>
       <h3>Pomodoro Timer</h3>
       <p>
         Boost productivity with customizable work sessions and break intervals.

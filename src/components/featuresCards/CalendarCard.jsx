@@ -2,8 +2,10 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 
 const CalendarCard = () => {
   return (
-    <div>
-      <FaRegCalendarAlt id="icon" />
+    <div id="card">
+      <div id="iconContainer">
+        <FaRegCalendarAlt id="icon" />
+      </div>
       <h3>Integrated Calendar</h3>
       <p>
         Visualize your schedule with tasks and events smoothly integrated in one
