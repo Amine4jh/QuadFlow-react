@@ -11,7 +11,7 @@ const Hero = () => {
       </p>
       <button id="primary">
         Get Started Free
-        <BiArrowToRight />
+        <BiArrowToRight id="icon" />
       </button>
     </section>
   );

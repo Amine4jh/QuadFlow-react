@@ -90,7 +90,7 @@ button#primary {
   @apply bg-primary hover:bg-transparent hover:border-foreground;
 }
 button#secondary {
-  @apply bg-background-dark;
+  @apply bg-background-dark hover:bg-transparent hover:border-foreground;
 }
 /*==========*/
 
@@ -127,6 +127,9 @@ header button {
 #hero button {
   @apply mx-auto hover:-translate-y-3;
 }
+#hero button #icon {
+  @apply ml-2;
+}
 
 /* Features Section */
 section#features {
@@ -141,7 +144,7 @@ section#features {
 #ftCardsContainer #card {
   @apply p-4 rounded-xl w-75 transition-all cursor-pointer hover:scale-110;
 }
-#ftCardsContainer #card:hover #iconContainer{
+#ftCardsContainer #card:hover #iconContainer {
   @apply shadow-xl shadow-primary-glow/15;
 }
 #ftCardsContainer #iconContainer {
@@ -172,6 +175,23 @@ section#features {
 }
 #usCardsContainer p {
   @apply text-primary-glow;
+}
+
+/* Banner */
+#banner {
+  @apply w-[75vw] mx-auto bg-gradient-to-br from-accent to-primary p-10 rounded-br-4xl rounded-tl-4xl;
+}
+#banner h6 {
+  @apply text-xl font-bold;
+}
+#banner h2 {
+  @apply my-8;
+}
+#banner button #icon {
+  @apply ml-2;
+}
+#banner button {
+  @apply hover:translate-x-5 hover:scale-110;
 }
 
 /* Calendar */

@@ -7,7 +7,7 @@ const TryNowBanner = () => {
       <h2>Ready to transform your productivity workflow?</h2>
       <button id="secondary">
         Try it Now!
-        <BiArrowToRight />
+        <BiArrowToRight id="icon" />
       </button>
     </div>
   );
