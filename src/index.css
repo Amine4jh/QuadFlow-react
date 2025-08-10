@@ -150,7 +150,7 @@ section#features {
   @apply mt-25 grid grid-cols-2 gap-y-8;
 }
 #usCardsContainer #card {
-  @apply bg-background-dark p-6 mx-8 flex items-start justify-between rounded-xl transition-all hover:shadow-lg hover:scale-110 shadow-primary/50;
+  @apply bg-background-dark p-6 mx-8 flex items-start justify-between rounded-xl transition-all hover:shadow-lg hover:scale-110 shadow-primary-glow/10;
 }
 #usCardsContainer #icon {
   @apply text-primary text-4xl mr-5;
