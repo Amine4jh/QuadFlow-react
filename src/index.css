@@ -74,9 +74,6 @@ p {
 #usCardsContainer p {
   @apply text-start text-base;
 }
-footer p {
-  @apply text-base text-primary-glow;
-}
 /*==========*/
 
 /* Buttons */
@@ -179,7 +176,7 @@ section#features {
 
 /* Banner */
 #banner {
-  @apply w-[75vw] mx-auto bg-gradient-to-br from-accent to-primary p-10 rounded-br-4xl rounded-tl-4xl;
+  @apply w-[75vw] mb-10 mx-auto bg-gradient-to-br from-accent to-primary p-10 rounded-br-4xl rounded-tl-4xl;
 }
 #banner h6 {
   @apply text-xl font-bold;
@@ -192,6 +189,29 @@ section#features {
 }
 #banner button {
   @apply hover:translate-x-5 hover:scale-110;
+}
+
+/* Footer */
+footer {
+  @apply mt-50;
+}
+footer #footerContent {
+  @apply flex items-start justify-around px-12 mb-5;
+}
+footer #iconContainer {
+  @apply flex items-center justify-evenly;
+}
+footer #icon {
+  @apply text-accent text-2xl;
+}
+#footerContent h5 {
+  @apply mb-6;
+}
+#footerContent a {
+  @apply block my-2 hover:text-primary;
+}
+footer p {
+  @apply p-2 text-base;
 }
 
 /* Calendar */
