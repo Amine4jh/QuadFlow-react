@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section id="hero">
       <h1 id="firstLine">Task Manager</h1>
-      <h1 id="lastLine">Task Manager</h1>
+      <h1 id="lastLine">All-in-One</h1>
       <p>
         Organize tasks, take notes, focus deeply, and plan your schedule—all in
         one beautiful dark-mode workspace. 4-in-1 Task Manager App
