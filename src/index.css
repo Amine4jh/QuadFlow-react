@@ -21,13 +21,12 @@
   --color-border: #374151;
 }
 
-/* Just For Now */
-body {
-  @apply bg-background flex justify-center;
-}
-/* Just For Now */
+/* =================== Initial Style =================== */
 * {
   @apply font-primary;
+}
+body {
+  @apply bg-gradient-to-br from-background to-background-dark;
 }
 #container {
   @apply px-15 w-[99vw] bg-[url(./assets/images/background.png)] bg-contain bg-no-repeat;
@@ -58,21 +57,11 @@ h1#lastLine {
 h2#lastLine {
   @apply my-2 text-accent;
 }
-#banner h2 {
-  @apply text-start w-xl;
-}
 /*==========*/
 
 /* Paragraphs */
-
-/** Default **/
 p {
   @apply text-xl font-normal text-soft text-center;
-}
-/** Specific **/
-#ftCardsContainer p,
-#usCardsContainer p {
-  @apply text-start text-base;
 }
 /*==========*/
 
@@ -92,23 +81,25 @@ button#secondary {
 /*==========*/
 
 /* Links */
-
-/** Default **/
 a {
   @apply text-base text-primary-glow;
 }
-/** Specific **/
-
 /*==========*/
 
 /* Sections */
 section {
   @apply my-62;
 }
+/*==========*/
+/* ===================================================== */
 
+/* =================== Landing Page =================== */
 /* Header */
 header {
   @apply flex items-center justify-between py-2;
+}
+header img {
+  @apply cursor-pointer;
 }
 header a {
   @apply text-foreground font-bold m-6 py-2 border-b border-transparent transition-all hover:text-accent hover:border-accent;
@@ -154,7 +145,7 @@ section#features {
   @apply text-center mt-6 mb-2;
 }
 #ftCardsContainer p {
-  @apply text-center mx-2;
+  @apply text-center mx-2 text-base;
 }
 
 /* WhyUs Section */
@@ -171,7 +162,7 @@ section#features {
   @apply text-primary text-4xl mr-5;
 }
 #usCardsContainer p {
-  @apply text-primary-glow;
+  @apply text-primary-glow text-start text-base;
 }
 
 /* Banner */
@@ -182,7 +173,7 @@ section#features {
   @apply text-xl font-bold;
 }
 #banner h2 {
-  @apply my-8;
+  @apply text-start w-xl my-8;
 }
 #banner button #icon {
   @apply ml-2;
@@ -198,11 +189,14 @@ footer {
 footer #footerContent {
   @apply flex items-start justify-around px-12 mb-5;
 }
+footer img {
+  @apply cursor-pointer;
+}
 footer #iconContainer {
   @apply flex items-center justify-evenly;
 }
 footer #icon {
-  @apply text-accent text-2xl;
+  @apply text-accent text-2xl hover:text-primary;
 }
 #footerContent h5 {
   @apply mb-6;
@@ -213,6 +207,7 @@ footer #icon {
 footer p {
   @apply p-2 text-base;
 }
+/* ==================================================== */
 
 /* Calendar */
 .sx-react-calendar-wrapper {
