@@ -130,19 +130,13 @@ section#features {
   @apply mt-25 flex items-start justify-evenly;
 }
 #ftCardsContainer #card {
-  @apply p-4 rounded-xl w-75 transition-all cursor-pointer hover:scale-110;
-}
-#ftCardsContainer #card:hover #iconContainer {
-  @apply shadow-xl shadow-primary-glow/15;
-}
-#ftCardsContainer #iconContainer {
-  @apply w-26 mx-auto bg-gradient-to-br from-accent to-primary p-4 rounded-full;
+  @apply px-6 py-12 rounded-xl w-65 transition-all cursor-pointer hover:scale-110 bg-background-dark hover:shadow-xl shadow-primary-glow/10;
 }
 #ftCardsContainer #icon {
-  @apply mx-auto text-7xl text-foreground;
+  @apply mx-auto text-7xl text-primary;
 }
 #ftCardsContainer h3 {
-  @apply text-center mt-6 mb-2;
+  @apply text-center mt-8 mb-2;
 }
 #ftCardsContainer p {
   @apply text-center mx-2 text-base;
