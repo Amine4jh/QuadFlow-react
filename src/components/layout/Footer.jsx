@@ -8,11 +8,21 @@ const Header = ({ logo }) => {
     <footer>
       <div id="footerContent">
         <div>
-          <img src={logo} alt="logo" width={120} />
-          <RiTwitterXFill />
-          <RiGithubFill />
-          <FaYoutube />
-          <RiLinkedinFill />
+          <img src={logo} alt="logo" width={150} />
+          <div id="iconContainer">
+            <a href="/">
+              <RiTwitterXFill id="icon" />
+            </a>
+            <a href="/">
+              <RiGithubFill id="icon" />
+            </a>
+            <a href="/">
+              <FaYoutube id="icon" />
+            </a>
+            <a href="/">
+              <RiLinkedinFill id="icon" />
+            </a>
+          </div>
         </div>
         <div>
           <h5>Features</h5>

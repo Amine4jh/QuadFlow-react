@@ -14,7 +14,7 @@ const LandingPage = () => {
       <Features />
       <WhyUs />
       <TryNowBanner />
-      <Footer />
+      <Footer logo={logo} />
     </div>
   );
 };
