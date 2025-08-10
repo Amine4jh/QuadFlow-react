@@ -9,7 +9,7 @@ const Hero = () => {
         Organize tasks, take notes, focus deeply, and plan your schedule—all in
         one beautiful dark-mode workspace. 4-in-1 Task Manager App
       </p>
-      <button>
+      <button id="primary">
         Get Started Free
         <BiArrowToRight />
       </button>

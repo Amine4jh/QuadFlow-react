@@ -7,7 +7,7 @@ const Header = ({ logo }) => {
         <a href="/">About</a>
         <a href="/">Contact</a>
       </div>
-      <button>Try For Free!</button>
+      <button id="primary">Try For Free!</button>
     </header>
   );
 };
