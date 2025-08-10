@@ -2,8 +2,8 @@ import { FiCloudLightning } from "react-icons/fi";
 
 const SecondCard = () => {
   return (
-    <div>
-      <FiCloudLightning />
+    <div id="card">
+      <FiCloudLightning id="icon" />
       <div>
         <h3>Blazing Fast & Beautiful</h3>
         <p>

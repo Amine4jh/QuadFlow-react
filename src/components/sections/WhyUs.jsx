@@ -8,7 +8,7 @@ const WhyUs = () => {
     <section id="whyUs">
       <h2 id="firstLine">Why This App Will Change</h2>
       <h2 id="lastLine">The Way You Work Forever</h2>
-      <p>
+      <p id="subTitle">
         Time is your most valuable asset—and managing it shouldn't be a jumping
         act between multiple tools. Our All-in-One productivity platform is
         built for people who want to reclaim their focus, boost efficiency, and

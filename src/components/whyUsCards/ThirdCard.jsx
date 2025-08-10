@@ -2,8 +2,8 @@ import { FaRegMoon } from "react-icons/fa";
 
 const ThirdCard = () => {
   return (
-    <div>
-      <FaRegMoon />
+    <div id="card">
+      <FaRegMoon id="icon" />
       <div>
         <h3>Built for Focus</h3>
         <p>

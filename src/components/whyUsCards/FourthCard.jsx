@@ -2,8 +2,8 @@ import { PiTarget } from "react-icons/pi";
 
 const FourthCard = () => {
   return (
-    <div>
-      <PiTarget />
+    <div id="card">
+      <PiTarget id="icon" />
       <div>
         <h3>Stay on Track, Every Day</h3>
         <p>

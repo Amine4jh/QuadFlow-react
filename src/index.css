@@ -148,7 +148,24 @@ section#features {
   @apply text-center mt-6 mb-2;
 }
 #ftCardsContainer p {
-  @apply text-center;
+  @apply text-center mx-2;
+}
+
+/* WhyUs Section */
+#whyUs p#subTitle {
+  @apply w-3xl mx-auto my-5;
+}
+#usCardsContainer {
+  @apply mt-25 grid grid-cols-2 gap-y-8;
+}
+#usCardsContainer #card {
+  @apply bg-background-dark p-6 mx-8 flex items-start justify-between rounded-xl transition-all hover:shadow-lg hover:scale-110 shadow-primary/50;
+}
+#usCardsContainer #icon {
+  @apply text-primary text-4xl mr-5;
+}
+#usCardsContainer p {
+  @apply text-primary-glow;
 }
 
 /* Calendar */
