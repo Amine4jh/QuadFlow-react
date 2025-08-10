@@ -82,7 +82,7 @@ button#secondary {
 
 /* Links */
 a {
-  @apply text-base text-primary-glow;
+  @apply text-base text-primary-glow transition-all;
 }
 /*==========*/
 
@@ -190,7 +190,7 @@ footer #iconContainer {
   @apply flex items-center justify-evenly;
 }
 footer #icon {
-  @apply text-accent text-2xl hover:text-primary;
+  @apply text-accent text-2xl hover:text-primary transition-all;
 }
 #footerContent h5 {
   @apply mb-6;
