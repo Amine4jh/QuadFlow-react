@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import TodoCard from "../featuresCards/TodoCard";
 import NotesCard from "../featuresCards/NotesCard";
 import CalendarCard from "../featuresCards/CalendarCard";
@@ -13,10 +14,18 @@ const Features = () => {
         the need to juggle multiple apps.
       </p>
       <div id="ftCardsContainer">
-        <TodoCard />
-        <NotesCard />
-        <CalendarCard />
-        <PomodoroCard />
+        <Link to="/features">
+          <TodoCard />
+        </Link>
+        <Link to="/features/notes">
+          <NotesCard />
+        </Link>
+        <Link to="/features/calendar">
+          <CalendarCard />
+        </Link>
+        <Link to="/features/pomodoro">
+          <PomodoroCard />
+        </Link>
       </div>
     </section>
   );

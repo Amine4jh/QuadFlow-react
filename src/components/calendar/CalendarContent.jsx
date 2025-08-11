@@ -4,7 +4,7 @@ const CalendarContent = () => {
   return (
     <div id="calendarContent">
       <CalendarApp />
-      <CalendarForm />
+      {/* <CalendarForm /> */}
     </div>
   );
 };

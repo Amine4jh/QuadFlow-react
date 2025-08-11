@@ -2,13 +2,16 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { RiGithubFill } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa";
 import { RiLinkedinFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Header = ({ logo }) => {
   return (
     <footer>
       <div id="footerContent">
         <div>
-          <img src={logo} alt="logo" width={150} />
+          <Link to="/">
+            <img src={logo} alt="logo" width={150} />
+          </Link>
           <div id="iconContainer">
             <a href="/">
               <RiTwitterXFill id="icon" />
@@ -26,10 +29,10 @@ const Header = ({ logo }) => {
         </div>
         <div>
           <h5>Features</h5>
-          <a href="/">Todo Tasks</a>
-          <a href="/">Taking Notes</a>
-          <a href="/">Calendar</a>
-          <a href="/">Pomodoro Timer</a>
+          <Link to="/features">Todo Tasks</Link>
+          <Link to="/features/notes">Taking Notes</Link>
+          <Link to="/features/calendar">Calendar</Link>
+          <Link to="/features/pomodoro">Pomodoro Timer</Link>
         </div>
         <div>
           <h5>Us</h5>
