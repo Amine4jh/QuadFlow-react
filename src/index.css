@@ -31,6 +31,9 @@ body {
 #container {
   @apply px-15 w-[99vw] bg-[url(./assets/images/background.png)] bg-contain bg-no-repeat;
 }
+#featuresContainer {
+  @apply px-15 w-[99vw];
+}
 
 /* Headings */
 

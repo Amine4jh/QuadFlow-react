@@ -4,7 +4,7 @@ import Footer from "../components/layout/Footer";
 
 const FeaturesLayout = () => {
   return (
-    <div id="container">
+    <div id="featuresContainer">
       <Nav />
       <Outlet></Outlet>
       <Footer />

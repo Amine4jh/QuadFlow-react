@@ -3,8 +3,9 @@ import { RiGithubFill } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa";
 import { RiLinkedinFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.png"
 
-const Header = ({ logo }) => {
+const Footer = () => {
   return (
     <footer>
       <div id="footerContent">
@@ -54,4 +55,4 @@ const Header = ({ logo }) => {
   );
 };
 
-export default Header;
+export default Footer;

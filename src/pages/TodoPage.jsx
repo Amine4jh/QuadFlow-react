@@ -1,11 +1,8 @@
-import Nav from "../components/layout/Nav";
 import TasksContainer from "../components/TasksContainer";
-import Footer from "../components/layout/Footer";
 
 const TodoPage = () => {
   return (
-    <div id="container">
-      <Nav />
+    <div>
       <h1>To-Do List</h1>
       <p>Organize and track your daily tasks</p>
       <div id="todoList">
@@ -17,7 +14,6 @@ const TodoPage = () => {
           <a href="/">Completed</a>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

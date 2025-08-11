@@ -1,4 +1,6 @@
-const Nav = ({ logo }) => {
+import logo from '../../assets/images/logo.png'
+
+const Nav = () => {
   return (
     <nav>
       <img src={logo} alt="logo" width={120} />
