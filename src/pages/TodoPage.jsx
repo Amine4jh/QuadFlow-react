@@ -1,12 +1,13 @@
-import TasksContainer from "../components/TasksContainer";
+import TasksContainer from "../components/todo/TasksContainer";
+import TodoForm from "../components/todo/TodoForm";
 
-const TodoPage = () => {
+const TodoPage = () => {  
   return (
-    <div>
+    <div id="featuresContent">
       <h1>To-Do List</h1>
       <p>Organize and track your daily tasks</p>
       <div id="todoList">
-        <input type="text" id="addTask" required />
+        <TodoForm />
         <TasksContainer />
         <div id="filter">
           <a href="/">All</a>
