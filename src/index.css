@@ -279,6 +279,30 @@ nav a.active2 {
 #todoList #filter {
   @apply w-[100%] flex justify-evenly bg-background p-2 rounded-xl;
 }
+
+/* Notes */
+#notesContainer{
+  @apply my-20
+}
+#notesContent {
+  @apply grid grid-cols-3 gap-8;
+}
+#notesContent #note {
+  @apply bg-background-dark rounded-xl px-4 py-4 pb-18 relative transition-all hover:shadow-xl shadow-accent/10 hover:scale-105;
+}
+#note h3 {
+  @apply text-2xl font-semibold;
+}
+#note p {
+  @apply text-start text-sm;
+}
+#note button {
+  @apply absolute bottom-5 right-5 bg-destructive hover:opacity-75 py-1 px-3;
+}
+#notesContainer #addIcon{
+  @apply text-foreground text-7xl bg-gradient-to-br from-accent to-primary rounded-full fixed right-10 bottom-10 cursor-pointer transition-all hover:bg-none hover:text-accent
+}
+
 /* ================================================ */
 
 /* Calendar */

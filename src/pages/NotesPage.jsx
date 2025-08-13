@@ -1,8 +1,8 @@
-import NotesContainer from "../components/NotesContainer";
+import NotesContainer from "../components/notes/NotesContainer";
 
 const NotesPage = () => {
   return (
-    <div>
+    <div id="featuresContent">
       <h1>Take Notes</h1>
       <p>Capture and organize your thoughts</p>
       <NotesContainer />
