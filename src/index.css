@@ -281,8 +281,8 @@ nav a.active2 {
 }
 
 /* Notes */
-#notesContainer{
-  @apply my-20
+#notesContainer {
+  @apply my-20;
 }
 #notesContent {
   @apply grid grid-cols-3 gap-8;
@@ -299,10 +299,20 @@ nav a.active2 {
 #note button {
   @apply absolute bottom-5 right-5 bg-destructive hover:opacity-75 py-1 px-3;
 }
-#notesContainer #addIcon{
-  @apply text-foreground text-7xl bg-gradient-to-br from-accent to-primary rounded-full fixed right-10 bottom-10 cursor-pointer transition-all hover:bg-none hover:text-accent
+#notesContainer #addIcon {
+  @apply text-foreground text-7xl bg-gradient-to-br from-accent to-primary rounded-full fixed right-10 bottom-10 cursor-pointer transition-all hover:bg-none hover:text-accent;
 }
 
+/* ModalForm */
+#noteForm {
+  @apply mt-10;
+}
+#noteForm input {
+  @apply w-full rounded-xl my-2 text-lg;
+}
+#noteForm button {
+  @apply inline-flex justify-center w-full my-5 mx-auto bg-success px-3 py-2 text-sm font-semibold hover:bg-success/50;
+}
 /* ================================================ */
 
 /* Calendar */

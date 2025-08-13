@@ -1,4 +1,4 @@
-import { IoMdAddCircleOutline } from "react-icons/io";
+import NotesForm from "./Modal";
 
 const NotesContainer = () => {
   return (
@@ -46,15 +46,14 @@ const NotesContainer = () => {
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam
+            ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam
           </p>
           <button>Delete</button>
         </div>
-
       </div>
-      <IoMdAddCircleOutline id="addIcon" />
+      <NotesForm />
     </div>
   );
 };
