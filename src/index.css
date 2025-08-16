@@ -308,7 +308,10 @@ nav a.active2 {
   @apply mt-10;
 }
 #noteForm input {
-  @apply w-full rounded-xl my-2 text-lg;
+  @apply w-full rounded-xl my-2 text-lg border border-transparent focus:border-primary;
+}
+#noteForm textarea {
+  @apply px-5 py-2 w-full h-35 rounded-xl text-foreground my-2 text-lg bg-background resize-none outline-none border border-transparent focus:border-primary;
 }
 #noteForm button {
   @apply inline-flex justify-center w-full my-5 mx-auto bg-success px-3 py-2 text-sm font-semibold hover:bg-success/50;
