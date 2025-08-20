@@ -17,7 +17,7 @@ const NoteForm = () => {
       valid = false;
       setTitleError("Title must be at least 3 characters");
     }
-    if (description.trim().split(" ").length < 3) {
+    if (description.trim().length < 3) {
       valid = false;
       setDescError("Description must be at least 3 words");
     }
