@@ -13,12 +13,12 @@ const CalendarForm = () => {
       </div>
       <div id="startDate">
         <label htmlFor="startDate">Start Date & Time:</label>
-        <input type="datetime" id="startDate" name="startDate" />
+        <input type="datetime-local" id="startDate" name="startDate" />
         <small></small>
       </div>
       <div id="endDate">
         <label htmlFor="endDate">End Date & Time:</label>
-        <input type="datetime" id="endDate" name="endDate" />
+        <input type="datetime-local" id="endDate" name="endDate" />
         <small></small>
       </div>
       <div id="eventDescription">
@@ -30,6 +30,7 @@ const CalendarForm = () => {
         ></textarea>
         <small></small>
       </div>
+      <button type="submit" id="primary">Add new event</button>
     </form>
   );
 };
