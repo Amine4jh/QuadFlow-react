@@ -12,7 +12,10 @@ import { createDragAndDropPlugin } from "@schedule-x/drag-and-drop";
 
 import "@schedule-x/theme-default/dist/index.css";
 
+import useCalendarStore from "../../stores/calendarStore";
+
 function CalendarApp() {
+  const { events } = useCalendarStore();
   const eventsService = useState(() => createEventsServicePlugin())[0];
 
   const calendar = useCalendarApp({
@@ -26,8 +29,8 @@ function CalendarApp() {
       {
         id: "1",
         title: "Event 1",
-        start: "2025-08-10 00:00",
-        end: "2025-08-10 02:00",
+        start: "2025-08-22 00:00",
+        end: "2025-08-22 02:00",
         description: "My cool event description!",
       },
     ],
@@ -37,6 +40,10 @@ function CalendarApp() {
       createEventModalPlugin(),
       createDragAndDropPlugin(),
     ],
+  });
+
+  events.map((event) => {
+    calendar.eventsService.add(event);
   });
 
   useEffect(() => {
