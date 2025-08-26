@@ -22,17 +22,21 @@ const PomodoroContainer = () => {
   };
 
   const startTimer = () => {
-    setIsActive(true);
+    if (isActive) {
+      setIsActive(false);
+    } else {
+      setIsActive(true);
+    }
   };
 
   return (
     <div id="pomodoroContainer">
-      <IoIosTimer />
+      <IoIosTimer id="headerIcon" />
       <h6>Focus Session</h6>
       <p>Time to concentrate on your tasks</p>
       <h1>{fomattedTime(time)}</h1>
       <div id="progress"></div>
-      <p>
+      <p id="prgsPerCent">
         <span>0</span>% completed
       </p>
       <div id="actions">
@@ -40,7 +44,7 @@ const PomodoroContainer = () => {
           <IoPlayOutline />
           Start
         </button>
-        <button id="secondary">
+        <button id="secondary" onClick={() => setTime(25 * 60 * 1000)}>
           <RiResetLeftFill />
           Reset
         </button>
