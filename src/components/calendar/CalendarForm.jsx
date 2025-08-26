@@ -3,27 +3,29 @@ import useCalendarStore from "../../stores/calendarStore";
 
 const CalendarForm = () => {
   const [title, setTitle] = useState("");
-  const [start, setStart] = useState("");
-  const [end, setEnd] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [startTime, setStartTime] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [endTime, setEndTime] = useState("");
   const [description, setDescription] = useState("");
 
   const addEvent = useCalendarStore((state) => state.addEvent);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const validStart = start.replace("T", " ");
-    const validEnd = end.replace("T", " ");
     addEvent({
       id: Date.now(),
       title: title,
-      start: validStart,
-      end: validEnd,
+      start: `${startDate} ${startTime}`,
+      end: `${endDate} ${endTime}`,
       description: description,
     });
 
     setTitle("");
-    setStart("");
-    setEnd("");
+    setStartDate("");
+    setStartTime("");
+    setEndDate("");
+    setEndTime("");
     setDescription("");
   };
 
@@ -41,27 +43,51 @@ const CalendarForm = () => {
         />
         <small></small>
       </div>
-      <div id="startDate">
-        <label htmlFor="startDate">Start Date & Time:</label>
-        <input
-          type="datetime-local"
-          id="startDate"
-          name="startDate"
-          value={start}
-          onChange={(e) => setStart(e.target.value)}
-        />
+      <div id="startDate" className="flex justify-between">
+        <div>
+          <label htmlFor="startDate">Start Date:</label>
+          <input
+            type="date"
+            id="startDate"
+            value={startDate}
+            onChange={(e) => setStartDate(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="startTime">Start Time:</label>
+          <input
+            type="time"
+            id="startTime"
+            value={startTime}
+            onChange={(e) => setStartTime(e.target.value)}
+          />
+        </div>
         <small></small>
       </div>
-      <div id="endDate">
-        <label htmlFor="endDate">End Date & Time:</label>
-        <input
-          type="datetime-local"
-          id="endDate"
-          name="endDate"
-          value={end}
-          onChange={(e) => setEnd(e.target.value)}
-        />
+      <div id="endDate" className="flex justify-between">
+        <div>
+          <label htmlFor="endDate">End Date:</label>
+          <input
+            type="date"
+            id="endDate"
+            value={endDate}
+            onChange={(e) => setEndDate(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="endTime">End Time:</label>
+          <input
+            type="time"
+            id="endTime"
+            value={endTime}
+            onChange={(e) => setEndTime(e.target.value)}
+          />
+        </div>
         <small></small>
+      </div>
+      <div id="checkbox" className="flex items-center">
+        <label htmlFor="allDay">All the Day</label>
+        <input type="checkbox" id="allDay" />
       </div>
       <div id="eventDescription">
         <label htmlFor="endDate">Task Name:</label>
