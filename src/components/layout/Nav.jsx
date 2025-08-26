@@ -4,7 +4,9 @@ import logo from "../../assets/images/logo.png";
 const Nav = () => {
   return (
     <nav>
-      <img src={logo} alt="logo" width={120} />
+      <Link to={"/"}>
+        <img src={logo} alt="logo" width={120} />
+      </Link>
       <div>
         <Link to="/features">To-Do List</Link>
         <Link to="/features/notes">Notes</Link>

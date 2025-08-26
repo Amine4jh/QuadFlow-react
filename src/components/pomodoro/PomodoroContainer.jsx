@@ -4,30 +4,37 @@ import { IoPlayOutline } from "react-icons/io5";
 import { RiResetLeftFill } from "react-icons/ri";
 
 const PomodoroContainer = () => {
+  const totalTime = 25 * 60 * 1000;
   const [time, setTime] = useState(25 * 60 * 1000);
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
+    let interval;
+
     if (isActive && time > 0) {
-      setTimeout(() => {
-        setTime(time - 1000);
+      interval = setInterval(() => {
+        setTime((prevTime) => prevTime - 1000);
       }, 1000);
     }
+    return () => clearInterval(interval);
   }, [isActive, time]);
 
   const fomattedTime = (time) => {
-    const seconds = Math.floor((time / 1000) % 60);
-    const minutes = Math.floor(time / 1000 / 60);
+    const seconds = String(Math.floor((time / 1000) % 60)).padStart(2, "0");
+    const minutes = String(Math.floor(time / 1000 / 60)).padStart(2, "0");
     return `${minutes}:${seconds}`;
   };
 
   const startTimer = () => {
-    if (isActive) {
-      setIsActive(false);
-    } else {
-      setIsActive(true);
-    }
+    setIsActive((prev) => !prev);
   };
+
+  const resetTimer = () => {
+    setIsActive(false);
+    setTime(25 * 60 * 1000);
+  };
+
+  const progress = Math.floor(((totalTime - time) / totalTime) * 100);
 
   return (
     <div id="pomodoroContainer">
@@ -35,16 +42,25 @@ const PomodoroContainer = () => {
       <h6>Focus Session</h6>
       <p>Time to concentrate on your tasks</p>
       <h1>{fomattedTime(time)}</h1>
-      <div id="progress"></div>
+      <div id="progressContainer">
+        <div
+          id="progressBar"
+          style={{
+            width: `${progress}%`,
+            transition: "width 0.5s ease",
+          }}
+          className="h-5 bg-success rounded-xl"
+        ></div>
+      </div>
       <p id="prgsPerCent">
-        <span>0</span>% completed
+        <span>{progress}</span>% completed
       </p>
       <div id="actions">
-        <button id="secondary" onClick={startTimer} disabled={isActive}>
+        <button id="secondary" onClick={startTimer}>
           <IoPlayOutline />
-          Start
+          {isActive ? "Pause" : "Start"}
         </button>
-        <button id="secondary" onClick={() => setTime(25 * 60 * 1000)}>
+        <button id="secondary" onClick={resetTimer}>
           <RiResetLeftFill />
           Reset
         </button>

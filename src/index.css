@@ -364,8 +364,8 @@ nav a.active2 {
 #pomodoroContainer h1 {
   @apply text-8xl my-10;
 }
-#pomodoroContainer #progress {
-  @apply bg-success w-[90%] h-5 m-auto my-2;
+#pomodoroContainer #progressContainer {
+  @apply bg-border w-[90%] h-5 m-auto my-2 rounded-xl;
 }
 #pomodoroContainer #prgsPerCent {
   @apply text-base text-border;
