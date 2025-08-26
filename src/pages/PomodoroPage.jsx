@@ -1,4 +1,4 @@
-import PomodoroContainer from "../components/PomodoroContainer";
+import PomodoroContainer from "../components/pomodoro/PomodoroContainer";
 
 const PomodoroPage = () => {
   return (
