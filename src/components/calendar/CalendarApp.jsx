@@ -13,10 +13,33 @@ import { createDragAndDropPlugin } from "@schedule-x/drag-and-drop";
 import "@schedule-x/theme-default/dist/index.css";
 
 import useCalendarStore from "../../stores/calendarStore";
+import { fetchPublicHolidays } from "../../services/holidayService";
+import { HOLIDAY_API_KEY } from "../../services/holidayAPI";
 
 function CalendarApp() {
   const { events } = useCalendarStore();
   const eventsService = useState(() => createEventsServicePlugin())[0];
+
+  const fetchData = async () => {
+    try {
+      const data = await fetchPublicHolidays("MA", HOLIDAY_API_KEY);
+      if (data.total_count === 0) {
+        console.log("Data is empty");
+      } else {
+        data.map((holiday) => {
+          calendar.eventsService.add({
+            id: "1",
+            title: holiday.name,
+            start: holiday.date,
+            end: holiday.date,
+          });
+        });
+      }
+    } catch {
+      console.log("Smth wrong!");
+    }
+  };
+  fetchData()
 
   const calendar = useCalendarApp({
     views: [
