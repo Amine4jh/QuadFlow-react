@@ -4,10 +4,16 @@ import { useState } from "react";
 const TodoForm = () => {
   const [task, setTask] = useState("");
   const addTask = useTodoStore((state) => state.addTask);
+  // const tasks = useTodoStore((state) => state.tasks);
+
+  // useEffect(() => {
+  //   localStorage.setItem("tasks", JSON.stringify(tasks));
+  // }, [tasks]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTask({ id: Date.now(), title: task, completed: false });
+    const newTask = { id: Date.now(), title: task, completed: false };
+    addTask(newTask);
     console.log(useTodoStore.getState().tasks);
     setTask("");
   };

@@ -1,7 +1,7 @@
 import TasksContainer from "../components/todo/TasksContainer";
 import TodoForm from "../components/todo/TodoForm";
 
-const TodoPage = () => {  
+const TodoPage = () => {
   return (
     <div id="featuresContent">
       <h1>To-Do List</h1>
@@ -9,11 +9,6 @@ const TodoPage = () => {
       <div id="todoList">
         <TodoForm />
         <TasksContainer />
-        <div id="filter">
-          <a href="/">All</a>
-          <a href="/">Active</a>
-          <a href="/">Completed</a>
-        </div>
       </div>
     </div>
   );

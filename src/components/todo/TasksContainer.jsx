@@ -1,32 +1,50 @@
 import { FaCheck } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import useTodoStore from "../../stores/todoStore";
+// import { useEffect } from "react";
 
 const TasksContainer = () => {
   const { tasks, removeTask, toggleTask } = useTodoStore();
   const confirmMsg = "You want to delete this task, are you sure?";
 
+  // useEffect(() => {
+  //   const data = localStorage.getItem("tasks");
+  //   if (data) {
+  //     const parsedTasks = JSON.parse(data);
+  //     parsedTasks.forEach((task) => addTask(task));
+  //   }
+  // }, [addTask]);
+
   return (
-    <div id="tasksContainer">
-      {tasks.length > 0 ? (
-        tasks.map((e) => (
-          <div key={e.id} id="task" className={e.completed ? "complete" : ""}>
-            <div>
-              <div id="check" onClick={() => toggleTask(e.id)}>
-                <FaCheck id="icon" />
+    <>
+      <div id="tasksContainer">
+        {tasks.length > 0 ? (
+          tasks.map((e) => (
+            <div key={e.id} id="task" className={e.completed ? "complete" : ""}>
+              <div>
+                <div id="check" onClick={() => toggleTask(e.id)}>
+                  <FaCheck id="icon" />
+                </div>
+                <span>{e.title}</span>
               </div>
-              <span>{e.title}</span>
+              <IoMdClose
+                id="closeIcon"
+                onClick={() => (confirm(confirmMsg) ? removeTask(e.id) : "")}
+              />
             </div>
-            <IoMdClose
-              id="closeIcon"
-              onClick={() => (confirm(confirmMsg) ? removeTask(e.id) : "")}
-            />
-          </div>
-        ))
-      ) : (
-        <small className="text-border text-xl text-center block my-6">No tasks yet!</small>
-      )}
-    </div>
+          ))
+        ) : (
+          <small className="text-border text-xl text-center block my-6">
+            No tasks yet!
+          </small>
+        )}
+      </div>
+      <div id="filter">
+        <a>All</a>
+        <a>Active</a>
+        <a>Completed</a>
+      </div>
+    </>
   );
 };
 
