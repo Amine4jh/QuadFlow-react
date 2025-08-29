@@ -4,16 +4,10 @@ import useTodoStore from "../../stores/todoStore";
 // import { useEffect } from "react";
 
 const TasksContainer = () => {
-  const { tasks, removeTask, toggleTask } = useTodoStore();
+  const { removeTask, toggleTask, setFilter, filter, filteredTasks } =
+    useTodoStore();
+  const tasks = filteredTasks();
   const confirmMsg = "You want to delete this task, are you sure?";
-
-  // useEffect(() => {
-  //   const data = localStorage.getItem("tasks");
-  //   if (data) {
-  //     const parsedTasks = JSON.parse(data);
-  //     parsedTasks.forEach((task) => addTask(task));
-  //   }
-  // }, [addTask]);
 
   return (
     <>
@@ -40,9 +34,27 @@ const TasksContainer = () => {
         )}
       </div>
       <div id="filter">
-        <a>All</a>
-        <a>Active</a>
-        <a>Completed</a>
+        <a
+          id="all"
+          className={filter === "all" ? "clicked" : ""}
+          onClick={() => setFilter("all")}
+        >
+          All
+        </a>
+        <a
+          id="active"
+          className={filter === "active" ? "clicked" : ""}
+          onClick={() => setFilter("active")}
+        >
+          Active
+        </a>
+        <a
+          id="completed"
+          className={filter === "completed" ? "clicked" : ""}
+          onClick={() => setFilter("completed")}
+        >
+          Completed
+        </a>
       </div>
     </>
   );

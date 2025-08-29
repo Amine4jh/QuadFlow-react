@@ -276,8 +276,15 @@ nav a.active2 {
   @apply text-foreground;
 }
 
+/* filter */
 #todoList #filter {
   @apply w-[100%] flex justify-evenly bg-background p-2 rounded-xl;
+}
+#todoList #filter a {
+  @apply text-border p-2 border-b text-center border-transparent cursor-pointer hover:text-primary-glow;
+}
+#todoList #filter a.clicked {
+  @apply text-primary-glow border-primary-glow;
 }
 
 /* Notes */
