@@ -4,11 +4,6 @@ import { useState } from "react";
 const TodoForm = () => {
   const [task, setTask] = useState("");
   const addTask = useTodoStore((state) => state.addTask);
-  // const tasks = useTodoStore((state) => state.tasks);
-
-  // useEffect(() => {
-  //   localStorage.setItem("tasks", JSON.stringify(tasks));
-  // }, [tasks]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

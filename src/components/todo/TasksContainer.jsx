@@ -1,7 +1,6 @@
 import { FaCheck } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import useTodoStore from "../../stores/todoStore";
-// import { useEffect } from "react";
 
 const TasksContainer = () => {
   const { removeTask, toggleTask, setFilter, filter, filteredTasks } =
