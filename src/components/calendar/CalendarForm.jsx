@@ -8,18 +8,29 @@ const CalendarForm = () => {
   const [endDate, setEndDate] = useState("");
   const [endTime, setEndTime] = useState("");
   const [description, setDescription] = useState("");
+  const [allDay, setAllDay] = useState(false);
 
   const addEvent = useCalendarStore((state) => state.addEvent);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addEvent({
-      id: Date.now(),
-      title: title,
-      start: `${startDate} ${startTime}`,
-      end: `${endDate} ${endTime}`,
-      description: description,
-    });
+    if (allDay) {
+      addEvent({
+        id: Date.now(),
+        title: title,
+        start: startDate,
+        end: endDate,
+        description: description,
+      });
+    } else {
+      addEvent({
+        id: Date.now(),
+        title: title,
+        start: `${startDate} ${startTime}`,
+        end: `${endDate} ${endTime}`,
+        description: description,
+      });
+    }
 
     setTitle("");
     setStartDate("");
@@ -53,15 +64,17 @@ const CalendarForm = () => {
             onChange={(e) => setStartDate(e.target.value)}
           />
         </div>
-        <div>
-          <label htmlFor="startTime">Start Time:</label>
-          <input
-            type="time"
-            id="startTime"
-            value={startTime}
-            onChange={(e) => setStartTime(e.target.value)}
-          />
-        </div>
+        {!allDay && (
+          <div>
+            <label htmlFor="startTime">Start Time:</label>
+            <input
+              type="time"
+              id="startTime"
+              value={startTime}
+              onChange={(e) => setStartTime(e.target.value)}
+            />
+          </div>
+        )}
         <small></small>
       </div>
       <div id="endDate" className="flex justify-between">
@@ -74,20 +87,22 @@ const CalendarForm = () => {
             onChange={(e) => setEndDate(e.target.value)}
           />
         </div>
-        <div>
-          <label htmlFor="endTime">End Time:</label>
-          <input
-            type="time"
-            id="endTime"
-            value={endTime}
-            onChange={(e) => setEndTime(e.target.value)}
-          />
-        </div>
+        {!allDay && (
+          <div>
+            <label htmlFor="endTime">End Time:</label>
+            <input
+              type="time"
+              id="endTime"
+              value={endTime}
+              onChange={(e) => setEndTime(e.target.value)}
+            />
+          </div>
+        )}
         <small></small>
       </div>
       <div id="checkbox" className="flex items-center">
         <label htmlFor="allDay">All the Day</label>
-        <input type="checkbox" id="allDay" />
+        <input type="checkbox" id="allDay" onClick={() => setAllDay(!allDay)} />
       </div>
       <div id="eventDescription">
         <label htmlFor="endDate">Task Name:</label>
