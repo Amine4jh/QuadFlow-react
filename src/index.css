@@ -32,7 +32,7 @@ body {
   @apply px-15 w-[99vw] bg-[url(./assets/images/background.png)] bg-contain bg-no-repeat;
 }
 #featuresContainer {
-  @apply px-15 w-[99vw];
+  @apply w-[99vw];
 }
 
 /* Headings */
@@ -216,10 +216,14 @@ footer p {
 #featuresContainer p {
   @apply text-primary-glow;
 }
+/* fix the p color */
+#featuresContainer footer p {
+  @apply text-border;
+}
 
 /* Nav */
 nav {
-  @apply flex items-center justify-between py-2 bg-background;
+  @apply px-15 flex items-center justify-between py-2 bg-background;
 }
 nav a {
   @apply px-4 py-2 mx-4 font-bold text-foreground hover:text-accent;
@@ -289,7 +293,7 @@ nav a.active2 {
 
 /* Notes */
 #notesContainer {
-  @apply my-20;
+  @apply mx-10 my-20;
 }
 #notesContent {
   @apply grid grid-cols-3 gap-8;
@@ -327,13 +331,13 @@ nav a.active2 {
 
 /* Calendar */
 .sx-react-calendar-wrapper {
-  @apply w-[850px] max-w-[100vw] h-[800px] max-h-[90vh];
+  @apply ml-5 w-[950px] max-w-[100vw] h-[800px] max-h-[90vh];
 }
 #calendarContent {
   @apply flex items-start justify-between my-20;
 }
 #calendarContent form {
-  @apply p-6 bg-background text-foreground w-[450px] rounded-xl shadow-lg hover:shadow-accent/10;
+  @apply mr-5 p-6 bg-background text-foreground w-[450px] rounded-xl shadow-lg hover:shadow-accent/10;
 }
 #calendarContent form label {
   @apply block text-sm text-primary-glow mx-2 mb-2 mt-5;
@@ -381,5 +385,19 @@ nav a.active2 {
   @apply flex items-center justify-center;
 }
 #pomodoroContainer button {
-  @apply bg-background mx-5 my-2
+  @apply bg-background mx-5 my-2;
+}
+
+/* 404 */
+#NotFound {
+  @apply h-[97vh];
+}
+#NotFound button {
+  @apply m-5;
+}
+#NotFound h1 {
+  @apply text-[300px] mt-15;
+}
+#NotFound h3 {
+  @apply text-center text-4xl;
 }

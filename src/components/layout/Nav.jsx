@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 
 const Nav = () => {
@@ -8,10 +8,31 @@ const Nav = () => {
         <img src={logo} alt="logo" width={120} />
       </Link>
       <div>
-        <Link to="/features">To-Do List</Link>
-        <Link to="/features/notes">Notes</Link>
-        <Link to="/features/calendar">Calendar</Link>
-        <Link to="/features/pomodoro">Pomodoro</Link>
+        <NavLink
+          to="/features"
+          end
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          To-Do List
+        </NavLink>
+        <NavLink
+          to="/features/notes"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Notes
+        </NavLink>
+        <NavLink
+          to="/features/calendar"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Calendar
+        </NavLink>
+        <NavLink
+          to="/features/pomodoro"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Pomodoro
+        </NavLink>
       </div>
     </nav>
   );

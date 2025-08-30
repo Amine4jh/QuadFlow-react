@@ -5,10 +5,12 @@ import TodoPage from "./pages/TodoPage";
 import NotesPage from "./pages/NotesPage";
 import CalendarPage from "./pages/CalendarPage";
 import PomodoroPage from "./pages/PomodoroPage";
+import NotFoundPage from "./components/common/NotFoundPage";
 
 const App = () => {
   const Routing = createBrowserRouter([
     { path: "/", element: <LandingPage /> },
+    { path: "*", element: <NotFoundPage /> },
     {
       path: "/features",
       element: <FeaturesLayout />,

@@ -1,4 +1,5 @@
 import { BiArrowToRight } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -9,10 +10,12 @@ const Hero = () => {
         Organize tasks, take notes, focus deeply, and plan your schedule—all in
         one beautiful dark-mode workspace. 4-in-1 Task Manager App
       </p>
-      <button id="primary">
-        Get Started Free
-        <BiArrowToRight id="icon" />
-      </button>
+      <Link to="/features">
+        <button id="primary">
+          Get Started Free
+          <BiArrowToRight id="icon" />
+        </button>
+      </Link>
     </section>
   );
 };
